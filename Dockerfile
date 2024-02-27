@@ -4,15 +4,6 @@ FROM node:14
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
-# Create a new non-root user (replace "myuser" with your desired username)
-RUN groupadd -r mygroup && useradd -r -g mygroup nonrootuser
-
-# Set permissions for the application directory
-RUN chown -R nonrootuser:mygroup /usr/src/app
-
-# Switch to the non-root user
-USER nonrootuser
-
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
 

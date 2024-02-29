@@ -22,15 +22,18 @@ This repository contains the code and configuration files for the SRE Tech Asses
 Once the application is deployed, you can access it using the assigned service URL or IP address.
 
 To run the application locally:
-1. Run your web server: `node app.js`
-2. Open a web browser and navigate to: http://localhost:3000
+1. Clone the repository.
+2. Run your web server: `node app.js`
+3. Open a web browser and navigate to: http://localhost:3000
 
 
 ## Important Commands
 
-- **Docker Build**`docker build -t my-web-app .`
+- **Docker Build**: `docker build -t my-web-app .`
+- **Docker run**: `docker run -p 3000:3000 my-web-app`
 - **Push Docker Image**: `docker push docker.io/sj29/my-web-app:latest`
 - **Kubernetes Apply**: `kubectl apply -f deployment.yaml`
+- **Kubectl Pods**: `kubectl get pods -o wide`
 
 ## Additional Notes
 

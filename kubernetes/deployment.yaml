@@ -13,14 +13,10 @@ spec:
         app: my-web-app
     spec:
       containers:
-      - name: my-web-app-container
-        image: my-web-app
+      - name: my-web-app
+        image: sj29/my-web-app  # Update this line to reference your Docker image
         ports:
         - containerPort: 3000
-        volumeMounts:
-        - name: data-volume
-          mountPath: /usr/src/app/node_modules
       volumes:
       - name: data-volume
-        persistentVolumeClaim:
-          claimName: my-web-app-pvc
+        emptyDir: {}

@@ -11,6 +11,11 @@ This repository contains the code and configuration files for the SRE Tech Asses
 - **pvc.yaml**: Kubernetes PersistentVolumeClaim manifest.
 - **README.md**: Project documentation.
   
+# Setup
+
+1. Install Docker and Kubernetes ( Minikube) on your local machine.
+2. Build the Docker image using the provided Dockerfile: `docker build -t my-web-app .`
+3. Apply the Kubernetes manifests to deploy the application: `kubectl apply -f .`
 # Usage
 
 Once the application is deployed, you can access it using the assigned service URL or IP address.
@@ -18,11 +23,6 @@ Once the application is deployed, you can access it using the assigned service U
 To run the application locally:
 1. Run your web server: `node app.js`
 2. Open a web browser and navigate to: http://localhost:3000
-# Setup
-
-1. Install Docker and Kubernetes ( Minikube) on your local machine.
-2. Build the Docker image using the provided Dockerfile: `docker build -t my-web-app .`
-3. Apply the Kubernetes manifests to deploy the application: `kubectl apply -f .`
 
 ## Important Commands
 
